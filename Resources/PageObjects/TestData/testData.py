@@ -1,4 +1,4 @@
 #test data for logging in
 
-user_name = ""
-user_password = ""
+user_name = "anthochie@gmail.com"
+user_password = "manofsteel28@@"
