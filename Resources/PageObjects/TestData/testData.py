@@ -1,6 +1,9 @@
 #Invalide Login page data
 
-Useremail="rioferdinard@gmail.com"
-UserPassword="234567"
 
+
+
+
+user_name = "anthochie@gmail.com"
+user_password = "manofsteel28@@"
 
