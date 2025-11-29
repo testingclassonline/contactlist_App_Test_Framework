@@ -1,8 +1,10 @@
 *** Settings ***
 Documentation           test case for Registration_Contact List App
 Resource                Resources/PageObjects/KeywordDefinitionFiles/Registrationkeywords.robot
-Test Setup
-Test Teardown
+Resource                C:/Development/Robot_Scripts/contactlist_App_Test_Framework/Resources/PageObjects/KeywordDefinitionFiles/login.robot
+Resource                C:/Development/Robot_Scripts/contactlist_App_Test_Framework/Resources/PageObjects/KeywordDefinitionFiles/commonkeywordsadhoc.robot
+Test Setup              launch Application
+Test Teardown           Exit Application
 
 
 
