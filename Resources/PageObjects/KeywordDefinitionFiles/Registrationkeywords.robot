@@ -9,22 +9,22 @@ Variables                   C:/testing projects/Robot Framework Project/contactl
 
 
 *** Keywords ***
-click on signup button
-    click button            
+Click on signup button
+    click button                          ${signupbuttonlocator}
 
-input firstname_re
-    wait until element is visible
-    input text
+Input Firstname
+    wait until element is visible         ${FirstNamelocator}
+    input text                            ${FirstNamelocator}      ${firstname_reg}
 
-input Lastname_re
-    input text
+Input Lastname
+    input text                            ${LastNamelocator}        ${lastname_reg}
 
-input Email_re
-    input text
+Input Email
+    input text                            ${Emaillocator}           ${email_reg}
 
-input password_re
-    input text
+Input Password
+    input text                            ${Passwordlocator}        ${password_reg}
 
-click Submit button_re
-    click button
+Click Submit button
+    click button                          ${SubmmitButtonLocator}
 
