@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-11-29T18:40:58.206857" rpa="false" schemaversion="5">
+<suite id="s1" name="E2E" source="C:\Test_framework_development\Robootframeworkscript\contactlist_App_Test_Framework\test\E2E\e2e.robot">
+<test id="s1-t1" name="Test that user canot login with invalid credential" line="10">
+<kw name="Launch Application" owner="commonKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-29T18:40:59.368728" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<msg time="2025-11-29T18:41:00.619489" level="WARN">The chromedriver version (140.0.7339.82) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (141.0.7390.123); currently, chromedriver 141.0.7390.122 is recommended for chrome 141.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>about:blank</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-29T18:40:59.368194" elapsed="2.631418"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-29T18:41:02.001606" level="INFO">Opening url 'https://thinking-tester-contact-list.herokuapp.com/'</msg>
+<arg>${ApplicationUrl}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-29T18:41:02.000826" elapsed="0.798720"/>
+</kw>
+<status status="PASS" start="2025-11-29T18:40:59.366442" elapsed="3.433324"/>
+</kw>
+<kw name="Input Username" owner="invalidlog">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-29T18:41:02.802307" level="INFO">Typing text 'rioferdinard@gmail.com' into text field '//input[@id='email']'.</msg>
+<arg>${LogEmailLocator}</arg>
+<arg>${invaliduser_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-29T18:41:02.801451" elapsed="0.179534"/>
+</kw>
+<status status="PASS" start="2025-11-29T18:41:02.800606" elapsed="0.180864"/>
+</kw>
+<kw name="Input password" owner="invalidlog">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-29T18:41:02.984327" level="INFO">Typing text '234567' into text field '//input[@id='password']'.</msg>
+<arg>${LogPasswordLocator}</arg>
+<arg>${invalidpassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-29T18:41:02.983622" elapsed="0.112103"/>
+</kw>
+<status status="PASS" start="2025-11-29T18:41:02.982923" elapsed="0.113054"/>
+</kw>
+<kw name="Click Log Button" owner="invalidlog">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-29T18:41:03.097409" level="INFO">Clicking button '//button[@id='submit']'.</msg>
+<arg>${LogButtonLocator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-29T18:41:03.097018" elapsed="0.096303"/>
+</kw>
+<status status="PASS" start="2025-11-29T18:41:03.096500" elapsed="0.097018"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Incorrect username or password</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-29T18:41:03.193892" elapsed="0.225774"/>
+</kw>
+<kw name="Exist Application" owner="commonKeywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-29T18:41:03.421856" elapsed="2.259623"/>
+</kw>
+<status status="PASS" start="2025-11-29T18:41:03.421010" elapsed="2.260748"/>
+</kw>
+<doc>Validate that invalid user can not login</doc>
+<tag>001</tag>
+<status status="PASS" start="2025-11-29T18:40:59.363985" elapsed="6.318244"/>
+</test>
+<doc>Contact List</doc>
+<status status="PASS" start="2025-11-29T18:40:58.210622" elapsed="7.473725"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">001</stat>
+</tag>
+<suite>
+<stat name="E2E" id="s1" pass="1" fail="0" skip="0">E2E</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-29T18:41:00.619489" level="WARN">The chromedriver version (140.0.7339.82) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (141.0.7390.123); currently, chromedriver 141.0.7390.122 is recommended for chrome 141.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
