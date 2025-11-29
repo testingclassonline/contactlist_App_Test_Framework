@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-11-29T18:20:56.110319" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Adhoc" source="C:\Development\Robot_Scripts\contactlist_App_Test_Framework\test\test_adhoc.robot">
+<test id="s1-t1" name="Test that user with valid credentials can login successfully" line="10">
+<kw name="Launch Application" owner="commonkeywordsadhoc" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-29T18:20:56.381603" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-29T18:20:56.381436" elapsed="1.260138"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-29T18:20:57.642734" level="INFO">Opening url 'https://thinking-tester-contact-list.herokuapp.com/'</msg>
+<arg>${ApplicationURL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-29T18:20:57.641977" elapsed="1.122619"/>
+</kw>
+<status status="PASS" start="2025-11-29T18:20:56.380961" elapsed="2.384099"/>
+</kw>
+<kw name="Enter Login Username" owner="login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-29T18:20:58.767400" level="INFO">Typing text 'anthochie@gmail.com' into text field '//*[@id='email']'.</msg>
+<arg>${UsernameInputboxLocator}</arg>
+<arg>${user_name_Login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-29T18:20:58.766656" elapsed="0.154117"/>
+</kw>
+<status status="PASS" start="2025-11-29T18:20:58.766103" elapsed="0.155000"/>
+</kw>
+<kw name="Enter Login Password" owner="login">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-29T18:20:58.922854" level="INFO">Typing password into text field '//*[@id='password']'.</msg>
+<msg time="2025-11-29T18:20:58.976904" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PasswordInputboxLocator}</arg>
+<arg>${user_password_Login}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-29T18:20:58.922212" elapsed="0.141669"/>
+</kw>
+<status status="PASS" start="2025-11-29T18:20:58.921624" elapsed="0.142533"/>
+</kw>
+<kw name="Click Login Button" owner="login">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-29T18:20:59.066998" level="INFO">Clicking button '//*[@id='submit']'.</msg>
+<arg>${SubmitButtonLocator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-29T18:20:59.066265" elapsed="0.145558"/>
+</kw>
+<status status="PASS" start="2025-11-29T18:20:59.065191" elapsed="0.147092"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Contact List</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-29T18:20:59.213062" elapsed="0.025033"/>
+</kw>
+<kw name="Exit Application" owner="commonkeywordsadhoc" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-29T18:20:59.240187" elapsed="2.144309"/>
+</kw>
+<status status="PASS" start="2025-11-29T18:20:59.239308" elapsed="2.145329"/>
+</kw>
+<status status="PASS" start="2025-11-29T18:20:56.380272" elapsed="5.004607"/>
+</test>
+<doc>Test cases suite for ontact list Application</doc>
+<status status="PASS" start="2025-11-29T18:20:56.114724" elapsed="5.270792"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Adhoc" id="s1" pass="1" fail="0" skip="0">Test Adhoc</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
